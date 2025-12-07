@@ -1,38 +1,44 @@
-1. String Length Calculator 
-Description
+1. Kalkulator długości tekstu 
+Opis
 
-The program prompts the user to enter a text string and calculates its length using a custom function my_strlen.
+Program pobiera od użytkownika tekst i oblicza jego długość za pomocą własnej funkcji my_strlen.
 
-The program correctly handles the newline character (\n) entered when pressing Enter.
+Program poprawnie uwzględnia znak nowej linii (\n), który jest wprowadzany po naciśnięciu Enter.
 
-Functions
+int my_strlen(const char s[]) — zlicza liczbę znaków w ciągu tekstowym do znaku końca stringa \0.
 
-int my_strlen(const char s[]) — counts the number of characters in a string up to the null terminator \0.
-
-Example Output
-Enter text: Hello, world!
-The length of your text is: 13 characters
-
-Compilation and Run
+Kompilacja i uruchomienie
 gcc my_strlen.c -o my_strlen
 ./my_strlen
 
-2. Banking Application 
-Description
+2. Aplikacja bankowa 
+Opis
 
-This program simulates a simple banking application with a menu:
+Program symuluje prostą aplikację bankową z menu:
 
-Deposit to an account
+Wpłata na konto
 
-Withdraw from an account
+Wypłata z konta
 
-Show account balance
+Wyświetlenie salda konta
 
-Exit
+Wyjście
 
-The program uses the saldo array to store account balances. All operations are implemented as separate functions, keeping main clean and readable.
+Program używa tablicy saldo do przechowywania stanów kont. Wszystkie operacje są wydzielone do osobnych funkcji, dzięki czemu funkcja main pozostaje czytelna i przejrzysta.
 
+Kompilacja i uruchomienie
+gcc bank_v2.c -o bank_v2
+./bank_v2
 
+Cechy
+
+Użycie stałej MAX_ACCOUNTS do określenia liczby kont.
+
+Walidacja danych wejściowych (niepoprawne znaki, ujemne kwoty).
+
+Brak zmiennych globalnych.
+
+Każda operacja jest wydzielona do osobnej funkcji, co zwiększa czytelność kodu.
 
 
 
